@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Hasegawa Mwmoriel Public School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .course {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #courseDetails {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border: 1px solid #b3e0ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Courses - Hasegawa Mwmoriel Public School</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Available Courses</h2>
+        
+        <div class="course" onclick="showCourseDetails('Mathematics')">
+            <h3>Mathematics</h3>
+            <p>Learn the fundamentals of mathematics, including algebra, geometry, and calculus.</p>
+        </div>
+
+        <div class="course" onclick="showCourseDetails('Science')">
+            <h3>Science</h3>
+            <p>Explore the world of science, including physics, chemistry, and biology.</p>
+        </div>
+
+        <div class="course" onclick="showCourseDetails('History')">
+            <h3>History</h3>
+            <p>Discover the key events and figures that shaped our world through history.</p>
+        </div>
+
+        <div id="courseDetails"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hasegawa Mwmoriel Public School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showCourseDetails(courseName) {
+            const courseDetails = document.getElementById('courseDetails');
+            courseDetails.style.display = 'block';
+            courseDetails.innerHTML = `<h3>${courseName} Details</h3><p>Details about the ${courseName} course will be provided here.</p>`;
+        }
+    </script>
+
+</body>
+</html>
